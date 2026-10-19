@@ -1,0 +1,112 @@
+/* Velmo's public pages: privacy policy and support. Read mode — one column, the app's own heading face. */
+@font-face {
+  font-family: "Cal Sans";
+  src: url("CalSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --paper: #f6f5f2;
+  --ink: #101218;
+  --ink-soft: #4a4f5c;
+  --brand: #273a4a;
+  --rule: #dddad3;
+  --mark: rgba(39, 58, 74, 0.16);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1116;
+    --ink: #f2f4f8;
+    --ink-soft: #a8adba;
+    --brand: #febd99;
+    --rule: #262a33;
+    --mark: rgba(254, 189, 153, 0.22);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-feature-settings: "kern", "liga";
+}
+
+::selection { background: var(--mark); }
+
+main {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 3.5rem 1rem 5rem;
+}
+
+.name {
+  font: 400 1.25rem/1 "Cal Sans", -apple-system, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  color: var(--brand);
+  text-decoration: none;
+}
+
+h1 {
+  font: 400 clamp(2rem, 6vw, 2.75rem)/1.1 "Cal Sans", -apple-system, system-ui, sans-serif;
+  letter-spacing: -0.015em;
+  word-spacing: 0.1em;
+  margin: 2.5rem 0 0.75rem;
+  text-wrap: balance;
+}
+
+.updated { color: var(--ink-soft); margin: 0 0 2.5rem; font-size: 0.9375rem; }
+
+.lede {
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font: 400 1.375rem/1.25 "Cal Sans", -apple-system, system-ui, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0.12em;
+  margin: 2.75rem 0 0.75rem;
+  text-wrap: balance;
+}
+
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.6rem; }
+li::marker { color: var(--ink-soft); }
+strong { font-weight: 600; }
+
+a {
+  color: var(--brand);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 3px; }
+
+.contact {
+  font: 400 1.375rem/1.3 "Cal Sans", -apple-system, system-ui, sans-serif;
+  margin: 0.5rem 0 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+footer a { margin-right: 1.25rem; }
